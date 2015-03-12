@@ -144,7 +144,7 @@ return [
     |
     */
 
-    'image_directory'             => 'packages/maxxscho/laravel-tcpdf/images/',
+    'image_directory'             => 'vendor/xaoc/laravel-tcpdf/images/',
 
     /*
     |--------------------------------------------------------------------------
