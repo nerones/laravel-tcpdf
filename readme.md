@@ -11,7 +11,7 @@ The Laravel TCPDF service provider can be installed via [composer](http://getcom
 ```json
 {
     "require": {
-        "maxxscho/laravel-tcpdf": "dev-master"
+        "xaoc/laravel-tcpdf": "dev-master"
     }
 }
 ```
@@ -21,7 +21,7 @@ Next, add the service provider to `app/config/app.php`.
 ```php
 'providers' => [
     //..
-    'Maxxscho\LaravelTcpdf\LaravelTcpdfServiceProvider',
+    'Xaoc\LaravelTcpdf\LaravelTcpdfServiceProvider',
 ]
 ```
 
@@ -45,21 +45,13 @@ For a list of all available function take a look at the [TCPDF Documentation](ht
 Laravel-TCPDF comes with some basic configuration.
 If you want to override the defaults, you can publish the config, like so:
 
-    php artisan config:publish maxxscho/laravel-tcpdf
+    php artisan vendor:publish
 
-Now access `app/config/packages/maxxscho/laravel-tcpdf/config.php`to customize.
-
-## Assets
-
-There is a 'blank' image in the assets folder of the package,
-which is in certain circumstances needed by TCPDF.
-Publish the assets, like so:
-
-    php artisan asset:publish maxxscho/laravel-tcpdf
+Now access `app/config/laravel-tcpdf.php`to customize.
 
 ## Extend/Overwrite
 
-Extending or overwriting Laravel TCPDF is easy. Simply extend `\Maxxscho\LaravelTcpdf\LaravelTcpdf` with your own class.
+Extending or overwriting Laravel TCPDF is easy. Simply extend `\Xaoc\LaravelTcpdf\LaravelTcpdf` with your own class.
 
 ## Custom Fonts
 

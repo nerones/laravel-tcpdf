@@ -8,9 +8,9 @@ return [
     |--------------------------------------------------------------------------
     | Default Page format. Supported formats include:
     | 4A0, 2A0, A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, B0,
-    | B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, C0, C1, C2, C3, 
-    | C4, C5, C6, C7, C8, C9, C10, RA0, RA1, RA2, RA3, RA4, 
-    | SRA0, SRA1, SRA2, SRA3, SRA4, LETTER, LEGAL, EXECUTIVE, 
+    | B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, C0, C1, C2, C3,
+    | C4, C5, C6, C7, C8, C9, C10, RA0, RA1, RA2, RA3, RA4,
+    | SRA0, SRA1, SRA2, SRA3, SRA4, LETTER, LEGAL, EXECUTIVE,
     | FOLIO
     |
     | Or, you can optionally specify a custom format in the form
@@ -49,7 +49,7 @@ return [
     |--------------------------------------------------------------------------
     | Enables automatic flowing of content to the next page if you
     | run out of room on the current page.
-    | 
+    |
     */
 
     'page_break_auto'             => true,
@@ -73,8 +73,8 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'creator'                     => 'Laravel-TCPDF by Markus Schober',
-    'author'                      => 'Laravel-TCPDF by Markus Schober',
+    'creator'                     => 'Laravel-TCPDF by Dmitriy Galievskiy',
+    'author'                      => 'Laravel-TCPDF by Dmitriy Galievskiy',
 
     /*
     |--------------------------------------------------------------------------
@@ -100,7 +100,7 @@ return [
 
     'header_on'                   => true,
     'header_title'                => 'Laravel-TCPDF',
-    'header_string'               => 'by Markus Schober',
+    'header_string'               => 'by Dmitriy Galievskiy',
     'header_font'                 => 'helvetica',
     'header_font_size'            => 10,
     'header_logo'                 => '',
@@ -215,7 +215,7 @@ return [
     |
     */
 
-    'thai_topchars'               => true,
+    'thai_topchars'               => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -226,7 +226,7 @@ return [
     |
     */
 
-    'tcpdf_calls_in_html'         => true,
+    'tcpdf_calls_in_html'         => false,
 
     /*
     |--------------------------------------------------------------------------
