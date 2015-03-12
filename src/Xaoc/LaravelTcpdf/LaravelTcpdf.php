@@ -1,4 +1,4 @@
-<?php namespace Maxxscho\LaravelTcpdf;
+<?php namespace Xaoc\LaravelTcpdf;
 
 use \TCPDF;
 use Config;

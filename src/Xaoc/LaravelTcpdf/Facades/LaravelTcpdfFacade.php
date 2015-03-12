@@ -1,4 +1,4 @@
-<?php namespace Maxxscho\LaravelTcpdf\Facades;
+<?php namespace Xaoc\LaravelTcpdf\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

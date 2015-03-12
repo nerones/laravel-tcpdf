@@ -1,4 +1,4 @@
-<?php namespace Maxxscho\LaravelTcpdf;
+<?php namespace Xaoc\LaravelTcpdf;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
@@ -67,6 +67,8 @@ class LaravelTcpdfServiceProvider extends ServiceProvider
         
         $this->publishes([$configPath => config_path('laravel-tcpdf.php')], 'config');
 
+        $this->mergeConfigFrom($configPath, 'laravel-tcpdf');
+
         /* override the default TCPDF config file
         ------------------------------------- */
         if (!defined('K_TCPDF_EXTERNAL_CONFIG'))
@@ -76,7 +78,7 @@ class LaravelTcpdfServiceProvider extends ServiceProvider
 
         $this->setTcpdfConstants();
 
-        AliasLoader::getInstance()->alias('PDF', 'Maxxscho\LaravelTcpdf\Facades\LaravelTcpdfFacade');
+        AliasLoader::getInstance()->alias('PDF', 'Xaoc\LaravelTcpdf\Facades\LaravelTcpdfFacade');
     }
 
 
