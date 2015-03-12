@@ -63,7 +63,9 @@ class LaravelTcpdfServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('maxxscho/laravel-tcpdf');
+        $configPath = __DIR__ . '/../config/laravel-tcpdf.php';
+        
+        $this->publishes([$configPath => config_path('laravel-tcpdf.php')], 'config');
 
         /* override the default TCPDF config file
         ------------------------------------- */
