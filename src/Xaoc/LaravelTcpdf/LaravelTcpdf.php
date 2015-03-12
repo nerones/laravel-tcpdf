@@ -30,19 +30,19 @@ class LaravelTcpdf extends TCPDF
     {
         // Initialize TCPDF
         parent::__construct(
-            Config::get('laravel-tcpdf::page_orientation'),
-            Config::get('laravel-tcpdf::page_unit'),
-            Config::get('laravel-tcpdf::page_format'),
-            Config::get('laravel-tcpdf::unicode'),
-            Config::get('laravel-tcpdf::encoding'),
-            Config::get('laravel-tcpdf::enable_disk_cache')
+            config('laravel-tcpdf.page_orientation'),
+            config('laravel-tcpdf.page_unit'),
+            config('laravel-tcpdf.page_format'),
+            config('laravel-tcpdf.unicode'),
+            config('laravel-tcpdf.encoding'),
+            config('laravel-tcpdf.enable_disk_cache')
         );
 
         // default margin settings
         $this->SetMargins(
-            Config::get('laravel-tcpdf::margin_left'),
-            Config::get('laravel-tcpdf::margin_top'),
-            Config::get('laravel-tcpdf::margin_right')
+            config('laravel-tcpdf.margin_left'),
+            config('laravel-tcpdf.margin_top'),
+            config('laravel-tcpdf.margin_right')
         );
 
         // default header setting
@@ -53,8 +53,8 @@ class LaravelTcpdf extends TCPDF
 
         // default page break settings
         $this->SetAutoPageBreak(
-            Config::get('laravel-tcpdf::page_break_auto'),
-            Config::get('laravel-tcpdf::footer_margin')
+            config('laravel-tcpdf.page_break_auto'),
+            config('laravel-tcpdf.footer_margin')
         );
 
         // default cell settings
@@ -65,13 +65,13 @@ class LaravelTcpdf extends TCPDF
 
         // default page font
         $this->setFont(
-            Config::get('laravel-tcpdf::page_font'),
+            config('laravel-tcpdf.page_font'),
             '',
-            Config::get('laravel-tcpdf::page_font_size')
+            config('laravel-tcpdf.page_font_size')
         );
 
         // default image scale
-        $this->setImageScale(Config::get('laravel-tcpdf::image_scale'));
+        $this->setImageScale(config('laravel-tcpdf.image_scale'));
     }
 
 
@@ -84,24 +84,24 @@ class LaravelTcpdf extends TCPDF
     protected function headerSettings()
     {
         $this->setPrintHeader(
-            Config::get('laravel-tcpdf::header_on')
+            config('laravel-tcpdf.header_on')
         );
 
         $this->setHeaderFont(array(
-            Config::get('laravel-tcpdf::header_font'),
+            config('laravel-tcpdf.header_font'),
             '',
-            Config::get('laravel-tcpdf::header_font_size')
+            config('laravel-tcpdf.header_font_size')
         ));
 
         $this->setHeaderMargin(
-            Config::get('laravel-tcpdf::header_margin')
+            config('laravel-tcpdf.header_margin')
         );
 
         $this->SetHeaderData(
-            Config::get('laravel-tcpdf::header_logo'),
-            Config::get('laravel-tcpdf::header_logo_width'),
-            Config::get('laravel-tcpdf::header_title'),
-            Config::get('laravel-tcpdf::header_string')
+            config('laravel-tcpdf.header_logo'),
+            config('laravel-tcpdf.header_logo_width'),
+            config('laravel-tcpdf.header_title'),
+            config('laravel-tcpdf.header_string')
         );
     }
 
@@ -115,17 +115,17 @@ class LaravelTcpdf extends TCPDF
     protected function footerSettings()
     {
         $this->setPrintFooter(
-            Config::get('laravel-tcpdf::footer_on')
+            config('laravel-tcpdf.footer_on')
         );
 
         $this->setFooterFont(array(
-            Config::get('laravel-tcpdf::footer_font'),
+            config('laravel-tcpdf.footer_font'),
             '',
-            Config::get('laravel-tcpdf::footer_font_size')
+            config('laravel-tcpdf.footer_font_size')
         ));
 
         $this->setFooterMargin(
-            Config::get('laravel-tcpdf::footer_margin')
+            config('laravel-tcpdf.footer_margin')
         );
     }
 
@@ -139,11 +139,11 @@ class LaravelTcpdf extends TCPDF
     protected function cellSettings()
     {
         $this->SetCellPadding(
-            Config::get('laravel-tcpdf::cell_padding')
+            config('laravel-tcpdf.cell_padding')
         );
 
         $this->setCellHeightRatio(
-            Config::get('laravel-tcpdf::cell_height_ratio')
+            config('laravel-tcpdf.cell_height_ratio')
         );
     }
 
@@ -156,8 +156,8 @@ class LaravelTcpdf extends TCPDF
      */
     protected function setDocumentProperties()
     {
-        $this->SetCreator(Config::get('laravel-tcpdf::creator'));
-        $this->SetAuthor(Config::get('laravel-tcpdf::author'));
+        $this->SetCreator(config('laravel-tcpdf.creator'));
+        $this->SetAuthor(config('laravel-tcpdf.author'));
     }
 
 }
