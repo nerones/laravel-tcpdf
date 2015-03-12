@@ -69,7 +69,7 @@ class LaravelTcpdfServiceProvider extends ServiceProvider
 
         $this->mergeConfigFrom($configPath, 'laravel-tcpdf');
 
-        $this->publishes([__DIR__ . '/../../assets' => public_path('vendor/xaoc/laravel-tcpdf')]);
+        $this->publishes([__DIR__ . '/../../assets' => public_path('vendor/xaoc/laravel-tcpdf')], 'public');
 
         /* override the default TCPDF config file
         ------------------------------------- */
