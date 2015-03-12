@@ -125,16 +125,16 @@ class LaravelTcpdfServiceProvider extends ServiceProvider
         {
             if (!defined($const))
             {
-                if (is_string(\Config::get('laravel-tcpdf::' . $configkey)))
+                if (is_string(config('laravel-tcpdf.' . $configkey)))
                 {
-                    if (strlen(\Config::get('laravel-tcpdf::' . $configkey)) > 0)
+                    if (strlen(config('laravel-tcpdf.' . $configkey)) > 0)
                     {
-                        define($const, \Config::get('laravel-tcpdf::' . $configkey));
+                        define($const, config('laravel-tcpdf.' . $configkey));
                     }
                 }
                 else
                 {
-                    define($const, \Config::get('laravel-tcpdf::' . $configkey));
+                    define($const, config('laravel-tcpdf.' . $configkey));
                 }
             }
         }
