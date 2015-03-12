@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/maxxscho/laravel-tcpdf.png?branch=master)](https://travis-ci.org/maxxscho/laravel-tcpdf)
 
-A simple [Laravel 4](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
+A simple [Laravel 5](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
 
 ## Installation
 
@@ -11,7 +11,7 @@ The Laravel TCPDF service provider can be installed via [composer](http://getcom
 ```json
 {
     "require": {
-        "maxxscho/laravel-tcpdf": "0.*"
+        "maxxscho/laravel-tcpdf": "dev-master"
     }
 }
 ```
