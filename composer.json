@@ -1,5 +1,5 @@
 {
-    "name": "xaoc/laravel-tcpdf",
+    "name": "nerones/laravel-tcpdf",
     "description": "A simple Laravel 5 service provider with some basic configuration for including the TCPDF library",
     "keywords": ["laravel", "pdf", "tcpdf"],
     "license": "MIT",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Xaoc\\LaravelTcpdf\\": "src/"
+            "Nerones\\LaravelTcpdf\\": "src/"
         }
     },
     "minimum-stability": "dev"
