@@ -92,10 +92,7 @@ class LaravelTcpdfServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['pdf'] = $this->app->share(function ($app)
-        {
-            return new LaravelTcpdf;
-        });
+        // 
     }
 
 
