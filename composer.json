@@ -15,8 +15,8 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "~5.0",
+        "php": ">=7.2.5",
+        "illuminate/support": "^6.0|^7.0",
         "tecnickcom/tcpdf": "6.*"
     },
     "autoload": {
